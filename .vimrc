@@ -1,3 +1,3 @@
-set ts=3 ai sw=3 nowrap et ruler nrformats=hex
+set ts=3 ai sw=3 wrap et ruler nrformats=hex
 syntax off
 set nohlsearch
