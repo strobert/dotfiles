@@ -1,21 +1,20 @@
 # .tcshrc
-
-# User specific aliases and functions
-
-#alias rm 'rm -i'
-#alias cp 'cp -i'
-#alias mv 'mv -i'
-
-setenv PATH "/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/bin:/usr/bin:/home/strobert/bin:/usr/X11R6/bin:."
-setenv NNTPSERVER news.pacbell.net
-setenv LS_COLORS "di=36"
+setenv PATH /usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/home/strobert/bin:/usr/X11R6/bin:/usr/local/jdk/bin
+setenv LS_COLORS di=36
+setenv CLASSPATH /home/strobert/devel/java-out:/home/strobert/devel/ext-hack:.
 
 set prompt="[%B%m%b] %n %t %d %~>"
 set mail="/var/spool/mail/strobert"
-
+set history=1000
+set savehist=(3000 merge)
+set histlit
+set ignoreeof=3
 unset autologout
-#biff y
-source ~/.alias
+set autolist=ambiguous
+set implicitcd
+
+source ~strobert/.alias
+
 complete cvs p/1/"(add admin annotate checkout commit diff edit \
                    editors export history import init log login \
                    rdiff release remove rtag status tag unedit \
