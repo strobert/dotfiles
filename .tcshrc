@@ -12,6 +12,7 @@ set ignoreeof=3
 unset autologout
 set autolist=ambiguous
 set implicitcd
+set pushdtohome
 
 source ~strobert/.alias
 
