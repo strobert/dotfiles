@@ -28,3 +28,7 @@ complete cvs p/1/"(add admin annotate checkout commit diff edit \
                    editors export history import init log login \
                    rdiff release remove rtag status tag unedit \
                    update watch)"/
+
+#bindkey setting
+bindkey -k up history-search-backward
+bindkey -k down history-search-forward
