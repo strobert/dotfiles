@@ -2,7 +2,7 @@
 setenv PATH /usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/home/strobert/bin:/usr/X11R6/bin:/usr/local/jdk/bin
 setenv LS_COLORS di=36
 #setenv CLASSPATH /home/strobert/devel/java-out:/home/strobert/devel/ext-hack:.
-setenv MAIL ~/Mail/Inbox
+setenv MAIL ~/Maildir/Inbox
 setenv LESS "-n -s -j4"
 setenv CVS_RSH ssh
 
