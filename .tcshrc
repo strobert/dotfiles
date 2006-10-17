@@ -19,7 +19,7 @@ set pushdtohome
 set nobeep
 if ($?loginsh) then
    setterm -blength 0
-   eval `ssh-agent`
+   #eval `ssh-agent`
 endif
 
 source ~strobert/.alias
