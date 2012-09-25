@@ -1,0 +1,6 @@
+complete fedpkg p/1/'(help build chain-build clean clog clone co commit ci compile \
+                      diff gimmespec gitbuildhash giturl import install lint local \
+                      mockbuild mock-config new new-sources patch prep pull push \
+                      scratch-build sources srpm switch-branch tag unused-patches \
+                      upload verify-files verrel retire tag-request update)'/ \
+                n/switch-branch/'(el5 el6 f16 f17 f18)'/
