@@ -1,2 +1,21 @@
-ssh-agent -k
+if ($?SSH_TTY && $?SSH_AUTH_SOCK) then
+   set shorthost=`echo $HOST | perl -p -e 's/\..*$//;'`
+   if ($?shorthost && -d ~/.auth_sock.d) then
+      set ssh_sock_path=~/.auth_sock.d/$shorthost
+   else
+      set ssh_sock_path=~/.auth_sock
+   endif
+   set my_cur_ssh_auth = `readlink -n $SSH_AUTH_SOCK`
+   if ($?my_set_ssh_auth && $my_set_ssh_auth == $my_cur_ssh_auth) then
+      if ($?my_prev_ssh_auth && -S "$my_prev_ssh_auth") then
+         ln -sf $my_prev_ssh_auth "${ssh_sock_path}"
+      else
+         # try and find one
+         set attempt = `find /tmp/ssh-* -uid 500 -name agent\* -type s | xargs /bin/ls -t -1 | head -n 1`
+         if ($?attempt) then
+            ln -sf $attempt "${ssh_sock_path}"
+         endif
+      endif
+   endif
+endif
 clear
