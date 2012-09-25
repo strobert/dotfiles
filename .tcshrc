@@ -1,13 +1,19 @@
 # .tcshrc
-setenv PATH /usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/home/strobert/bin:/usr/X11R6/bin:/usr/local/jdk/bin
+setenv PATH /usr/bin:/usr/sbin:/sbin:/usr/local/bin:/bin:/home/strobert/bin:/usr/X11R6/bin:/usr/local/jdk/bin
 setenv LS_COLORS di=36
 #setenv CLASSPATH /home/strobert/devel/java-out:/home/strobert/devel/ext-hack:.
 setenv MAIL ~/Maildir/Inbox
 setenv LESS "-n -s -j4 -R"
 setenv CVS_RSH ssh
 setenv PAGER "less"
+setenv LC_COLLATE C
+#setenv LC_CTYPE C
 
-set prompt="[%B%m%b] %n %t %d %~>"
+set promptchars=">#"
+#set prompt='%n@%B%m%b:%S%h%s::%c03%#'
+#set prompt='[%n@%B%m%b] %B%T%b %S%h%s:%c02%#'
+#set prompt="[%B%m%b] %n %t %d %~>"
+set prompt="[%B%m%b] %n %T %d %~>"
 set mail=${MAIL}
 set history=1000
 set savehist=(3000 merge)
@@ -18,17 +24,19 @@ set autolist=ambiguous
 set implicitcd
 set pushdtohome
 set nobeep
+set color
+set colorcat
+set backslash_quote
+set symlinks=ignore
+set complete=enhance
 if ($?loginsh) then
    setterm -blength 0
    #eval `ssh-agent`
 endif
 
-source ~strobert/.alias
-
-complete cvs p/1/"(add admin annotate checkout commit diff edit \
-                   editors export history import init log login \
-                   rdiff release remove rtag status tag unedit \
-                   update watch)"/
+foreach src (`echo ~strobert/.tcshrc.d/*`)
+   source $src
+end
 
 #bindkey setting
 bindkey -k up history-search-backward
