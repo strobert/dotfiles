@@ -1,0 +1,6 @@
+if ($?loginsh) then
+   cmp -s ${HOME}/.hushlogin /etc/motd
+   if ($status) then
+      tee ${HOME}/.hushlogin < /etc/motd
+   endif
+endif
