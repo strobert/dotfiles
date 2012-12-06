@@ -38,6 +38,9 @@ foreach src (`echo ~strobert/.tcshrc.d/*`)
    source $src
 end
 
+set wordchars='*?_-.[]~=^;${}\'"\\'
 #bindkey setting
 bindkey -k up history-search-backward
 bindkey -k down history-search-forward
+bindkey -a '^[[1;5D' backward-word
+bindkey -a '^[[1;5C' forward-word
