@@ -7,7 +7,7 @@ syntax enable
 set history=100
 set viminfo='100,f1,:200,/200
 
-set shortmess=a
+set shortmess=aO
 set backspace=indent,eol,start
 set showcmd
 set lazyredraw
@@ -133,6 +133,8 @@ nmap <C-Right> <C-w>l
 
 " v_K is really really annoying; disable 
 vmap K k
+
+"nnoremap <esc> :noh<return><esc>
 
 " Delete a buffer but keep layout with ^w! 
 if has("eval")
