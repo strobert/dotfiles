@@ -56,6 +56,11 @@ if has("autocmd")
           \ set tabstop=2 shiftwidth=2 softtabstop=2 |
           \ set smartindent
   augroup END
+  augroup ruby " 
+    autocmd BufRead,BufNewFile *.rb
+          \ set tabstop=2 shiftwidth=2 softtabstop=2 |
+          \ set smartindent
+  augroup END
   augroup perl " 
     autocmd BufRead,BufNewFile *.p[lm]
           \ set tabstop=3 shiftwidth=3 softtabstop=3 |
