@@ -36,3 +36,4 @@ alias reload 'rndc reload \!* IN internal; sleep 1; rndc reload \!* IN external'
 alias wcd 'pushd /usr/local/wfcom/www.wfcommittee.com'
 alias dcd 'pushd /usr/local/wfcom/dev.wfcommittee.com'
 alias vzl "sudo vzlist -a -o ctid,hostname,status,ostemplate,numproc,diskspace,diskspace.s,diskinodes,diskinodes.s | perl -p -e 's/\.internal\.strobe\.net//' | tr -s ' ' | tr ' ' '\t' | expand -t 1,2,7,17,26,44,50,60,70,78"
+alias from from.pl
