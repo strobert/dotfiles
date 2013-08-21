@@ -51,13 +51,14 @@ inoremap # X<BS>#
 
 " autocmd for file type loading
 if has("autocmd")
+  autocmd FileType * setlocal formatoptions-=r formatoptions-=o
   augroup puppet " 
     autocmd BufRead,BufNewFile *.pp
           \ set tabstop=2 shiftwidth=2 softtabstop=2 |
           \ set smartindent
   augroup END
   augroup ruby " 
-    autocmd BufRead,BufNewFile *.rb
+    autocmd BufRead,BufNewFile *.rb,*.erb
           \ set tabstop=2 shiftwidth=2 softtabstop=2 |
           \ set smartindent
   augroup END
