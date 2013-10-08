@@ -7,7 +7,7 @@ syntax enable
 set history=100
 set viminfo='100,f1,:200,/200
 
-set shortmess=aO
+set shortmess=aOt
 set backspace=indent,eol,start
 set showcmd
 set lazyredraw
