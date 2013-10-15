@@ -152,3 +152,6 @@ endif
 "nnoremap  :W        :w
 "nnoremap  :Q        :q
 
+hi link mailHeaderKey Identifier
+hi link mailHeaderEmail String
+hi link mailSubject Label
