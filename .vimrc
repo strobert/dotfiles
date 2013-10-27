@@ -1,5 +1,4 @@
 set ts=3 ai sw=3 wrap et ruler nrformats=hex
-set nohlsearch
 "set vb t_vb=
 set bg=dark
 try
