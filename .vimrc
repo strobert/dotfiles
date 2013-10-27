@@ -2,7 +2,11 @@ set ts=3 ai sw=3 wrap et ruler nrformats=hex
 set nohlsearch
 "set vb t_vb=
 set bg=dark
-colorscheme strobe
+try
+   colorscheme strobe
+catch /^Vim\%((\a\+)\)\=:E185/
+   colorscheme slate
+endtry
 syntax enable
 set history=100
 set viminfo='100,f1,:200,/200

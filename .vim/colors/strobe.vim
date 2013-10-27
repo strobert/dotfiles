@@ -1,6 +1,7 @@
 "%% SiSU Vim color file
-" Slate Maintainer: Ralph Amissah <ralph@amissah.com>
-" (originally looked at desert Hans Fugal <hans@fugal.net> http://hans.fugal.net/vim/colors/desert.vim (2003/05/06)
+" started from slate and customized...
+"    Slate Maintainer: Ralph Amissah <ralph@amissah.com>
+"    (originally looked at desert Hans Fugal <hans@fugal.net> http://hans.fugal.net/vim/colors/desert.vim (2003/05/06)
 :set background=dark
 :highlight clear
 if version > 580
